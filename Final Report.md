@@ -27,10 +27,12 @@ gave us highest r2 value and was the most accurate regression model
 
 With our data, the Generalized Linear Regression Model is the best model.
 As the visualization below shows, the squared correlation values on both the testing and training data drop as lambda (penalty) increases. When alpha is closer to zero (ridge regression), this drop occurs more gradually and overfitting increases, and when alpha is closer to 1 (lasso regression), the drop occurs more quickly and overfitting decreases.
+
 <img src="https://github.com/johnsaliba/480/blob/master/lambda%20alpha%20r%20square.PNG" width="800">
-<img src="https://github.com/johnsaliba/480/blob/master/lambda%20alpha%20r%20square%20legend.PNG" width="300">
- The model at its best performance still overfits the data, but in some instances the squared correlations of the training and testing data were both close to 0.8, and in these instances the model was performing quite well.
+<img src="https://github.com/johnsaliba/480/blob/master/lambda%20alpha%20r%20square%20legend.PNG" width="50">
+
+The model at its best performance still overfits the data, but in some instances the squared correlations of the training and testing data were both close to 0.8, and in these instances the model was performing quite well.
  
 <img src="https://github.com/johnsaliba/480/blob/master/model%20predicted%20values.PNG">
-There is no subset of factors that best predicts the number of games a team will win, because with linear regression, more factors make the model more accurate. 
+There is no subset of factors that best predicts the number of games a team will win, because with linear regression, more factors make the model more accurate.
 
