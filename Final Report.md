@@ -26,7 +26,7 @@ gave us highest r2 value and was the most accurate regression model
 ### Conclusion, Limitations, Ways to Improve
 
 With our data, the Generalized Linear Regression Model is the best model.
-As the visualization below shows, the squared correlation values on both the testing and training data drop as lambda (penalty) increases. When alpha is closer to zero (ridge regression), this drop occurs more gradually and overfitting increases, and when alpha is closer to 1 (lasso regression), the drop occurs more quickly and overfitting decreases.
+As the visualization below shows, the squared correlation values on both the testing and training data drop as lambda (penalty) increases. When alpha is closer to zero (ridge regression), this drop occurs more gradually and overfitting increases, and when alpha is closer to 1 (lasso regression), the drop occurs more quickly and overfitting decreases. The X axis value is alpha, the Y axis value is lambda, and the Z axis values are the squared correlations on the testing and training datas. Refer the the legen below the visualization.
 
 <img src="https://github.com/johnsaliba/480/blob/master/lambda%20alpha%20r%20square.PNG" width="800">
 <img src="https://github.com/johnsaliba/480/blob/master/lambda%20alpha%20r%20square%20legend.PNG" width="150">
