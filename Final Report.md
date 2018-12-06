@@ -9,6 +9,8 @@ We used a Generalized Linear Regression Model to predict the number of games won
 
 We used RapidMiner to create a Generalized Linear Regression Model. We used the 'loop' operator to run it with differing alphas and lambdas. The alphas ranged from 0 to 1, with the zero value representing ridge regression, the one value representing lasso regression, and the numbers in between representing a combination of the two. The lambdas ranged from 0.00000001 to 5 with the lower values representing less regularization and higher values representing more regularization.
 
+    * <img src="insideloop.png" width="500">
+
 ### Justification of the selection of models and parameters;
 
 ### Conclusion and limitation of your research, and suggestions for improving your
