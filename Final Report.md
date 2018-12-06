@@ -22,5 +22,10 @@ We used RapidMiner to create a Generalized Linear Regression Model, which can be
 
 ### Justification of the selection of models and parameters;
 gave us highest r2 value and was the most accurate regression model
-Conclusion and limitation of your research, and suggestions for improving your
+
+### Conclusion, Limitations, Ways to Improve
+
+With our data, the Generalized Linear Regression Model is the best model. 
+<img src="https://github.com/johnsaliba/480/blob/master/lambda%20alpha%20r%20square.PNG" width="800">
+There is no subset of factors that best predicts the number of games a team will win, because with linear regression, more factors make the model more accurate. 
 
