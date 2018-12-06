@@ -18,6 +18,7 @@ We used RapidMiner to create a Generalized Linear Regression Model. We used the 
 
 <img src="https://github.com/johnsaliba/480/blob/master/outside%20loop.PNG" width="500">
 
+
 Justification of the selection of models and parameters;
 
 Conclusion and limitation of your research, and suggestions for improving your
