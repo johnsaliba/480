@@ -1,7 +1,7 @@
 # Generalized Linear Regression to Predict NFL Team Wins
 ### Introduction to your project, such as background and identified problems
 
-We used a Generalized Linear Regression Model to predict the number of games won by different NFL teams in different seasons based on various statistics with data taken from the ESPN website. We chose this topic because we are both interested in sports and the increasing prevalence of analytics used in professional sports. Our initial problem was to find out which factors and which models best predict a team's performance, measured in the amount of games won.
+We used a Generalized Linear Regression Model to predict the number of games won by different NFL teams in different seasons based on various statistics with data taken from the ESPN website. We chose this topic because we are both interested in sports and the increasing prevalence of analytics used in professional sports. Our initial problem was to find out which factors and which models best predict a team's performance, measured in the amount of games won, meaning our problem is a regression problem.
 
 
 
@@ -25,15 +25,14 @@ gave us highest r2 value and was the most accurate regression model
 
 ### Conclusions
 
-With our data, the Generalized Linear Regression Model is the best model.
-As the visualization below shows, the squared correlation values on both the testing and training data drop as lambda (penalty) increases. When alpha is closer to zero (ridge regression), this drop occurs more gradually and overfitting increases, and when alpha is closer to 1 (lasso regression), the drop occurs more quickly and overfitting decreases. The X axis value is alpha, the Y axis value is lambda, and the Z axis values are the squared correlations on the testing and training datas. Refer the the legend below the visualization.
+With our data, the Generalized Linear Regression Model is the best model. As the visualization below shows, the squared correlation values on both the testing and training data drop as lambda (penalty) increases. When alpha is closer to zero (ridge regression), this drop occurs more gradually and overfitting increases, and when alpha is closer to 1 (lasso regression), the drop occurs more quickly and overfitting decreases. The X axis value is alpha, the Y axis value is lambda, and the Z axis values are the squared correlations of the model's performances on the testing and training data. Refer the the legend below the visualization.
 
 <img src="https://github.com/johnsaliba/480/blob/master/lambda%20alpha%20r%20square.PNG" width="800">
 <p align="center">
 <img align="center" src="https://github.com/johnsaliba/480/blob/master/lambda%20alpha%20r%20square%20legend.PNG" width="150">
 </p>
 
-When the model is performing best, it still overfits, but in some instances the squared correlations of the training and testing data were both close to 0.8, and in these instances the model was performing quite well, as you can see in the screenshot below. The left column shows the actual number of games the team won, and the right column shows the model's predicted number of wins. Many of the predictions came very close, but there were some outliers. One of them can be seen in the third row from the bottom. That team won six games, but the model's prediction was around 11.3, which is a huge disparity considering the teams play 16-game seasons.
+Even when the model is performing at its best, it still overfits, but in some instances the squared correlations of the training and testing data were both close to 0.8, and in these instances the model was performing quite well, as you can see in the screenshot below. The left column shows the actual number of games the team won, and the right column shows the model's predicted number of wins. Many of me very close, but there were some outliers. One of them can be seen in the third row from the bottom. That team won six games, but the model's prediction was around 11.3, which is a huge disparity considering the teams play 16-game seasons. Conversely, there are many instances where the model is off only by a few decimal points. Additionally, the table in the screenshot below is sorted by which teams the model predicted to win the most games, so the team at the top is the one the model considered to be the best (in the test data set). Even though the model underestimated the amount of games that team would win, it predicted that it would win more games than any other team in the dataset, which turned out to be correct.
 <p align="center">
   <img align="center" src="https://github.com/johnsaliba/480/blob/master/model%20predicted%20values.PNG">
 </p>
