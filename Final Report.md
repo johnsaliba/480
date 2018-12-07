@@ -33,7 +33,7 @@ As the visualization below shows, the squared correlation values on both the tes
 <img align="center" src="https://github.com/johnsaliba/480/blob/master/lambda%20alpha%20r%20square%20legend.PNG" width="150">
 </p>
 
-The model at its best performance still overfits the data, but in some instances the squared correlations of the training and testing data were both close to 0.8, and in these instances the model was performing quite well.
+The model at its best performance still overfits the data, but in some instances the squared correlations of the training and testing data were both close to 0.8, and in these instances the model was performing quite well, as you can see in the screenshot below. The left column shows the actual number of games the team won, and the right column shows the model's predicted number of wins. Many of the predictions came very close, but there were some outliers. One of them can be seen in the third row from the bottom. That team won six games, but the model's prediction was almost double that.
 <p align="center">
   <img align="center" src="https://github.com/johnsaliba/480/blob/master/model%20predicted%20values.PNG">
 </p>
