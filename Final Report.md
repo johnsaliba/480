@@ -31,10 +31,12 @@ With our data, the Generalized Linear Regression Model is the best model. As the
 <p align="center">
 <img align="center" src="https://github.com/johnsaliba/480/blob/master/lambda%20alpha%20r%20square%20legend.PNG" width="150">
 </p>
-<img src="https://github.com/johnsaliba/480/blob/master/averages.PNG" width="800">
+
 
 
 Even when the model is performing at its best, it still overfits, but in some instances the squared correlations of the training and testing data were both close to 0.8, and in these instances the model was performing quite well, as you can see in the screenshot below. The left column shows the actual number of games the team won, and the right column shows the model's predicted number of wins. Many of me very close, but there were some outliers. One of them can be seen in the third row from the bottom. That team won six games, but the model's prediction was around 11.3, which is a huge disparity considering the teams play 16-game seasons. Conversely, there are many instances where the model is off only by a few decimal points. Additionally, the table in the screenshot below is sorted by which teams the model predicted to win the most games, so the team at the top is the one the model considered to be the best (in the test data set). Even though the model underestimated the amount of games that team would win, it predicted that it would win more games than any other team in the dataset, which turned out to be correct.
+<img src="https://github.com/johnsaliba/480/blob/master/averages.PNG" width="800">
+
 <p align="center">
   <img align="center" src="https://github.com/johnsaliba/480/blob/master/model%20predicted%20values.PNG">
 </p>
