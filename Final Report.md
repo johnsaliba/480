@@ -13,7 +13,7 @@ For offensive statistics we looked at as points scored, rushing yards gained, pa
 
 The following figures look at the statistics of points scored, passing yards gained, rushing yards gained, and how many wins a team had. We also have a histogram that looks at the number of wins a team got in any season and the how often a team got that many wins, showing that the number of wins is normally distributed. The data can be accessed [here](https://github.com/johnsaliba/480/blob/master/NFL%20TEAM%20DATA.xlsx).
 <p align="center">
- <img src="https://github.com/cwolf51/480/blob/master/points%20scored%20and%20wins.png" alt="test" width="800">
+ <img src="https://github.com/cwolf51/480/blob/master/points%20scored%20and%20wins.png" width="800">
  <img src="https://github.com/cwolf51/480/blob/master/pass%20yards%20allowed%20and%20wins.PNG" width="800">
  <img src="https://github.com/cwolf51/480/blob/master/rush%20yards%20allowed%20and%20wins.PNG" width="800">
  <img src="https://github.com/cwolf51/480/blob/master/distribution%20of%20wins.png" width="800">
@@ -22,15 +22,15 @@ The following figures look at the statistics of points scored, passing yards gai
 
 ### Trained Model
 
-We used RapidMiner to create a Generalized Linear Regression Model, which can be accessed [here](https://github.com/johnsaliba/480/blob/master/Final%20Project%20Model.xml). We used the 'loop parameters' operator to run it with differing alphas and lambdas. The alphas ranged from 0 to 1, with the zero value representing ridge regression, the one value representing lasso regression, and the numbers in between representing a combination of the two. The lambdas ranged from 0.00000001 to 5 with the lower values representing less regularization and higher values representing more regularization.
+We used RapidMiner to create a Generalized Linear Regression Model, which can be accessed [here](https://github.com/johnsaliba/480/blob/master/Final%20Project%20Model.xml), and viewed in the screenshots below this paragraph. We used the 'loop parameters' operator to run the model with differing alphas and lambdas. The alphas ranged from 0 to 1, with the zero value representing ridge regression, the one value representing lasso regression, and the numbers in between representing a combination of the two. The lambdas ranged from 0.00000001 to 5 with the lower values representing less regularization and higher values representing more regularization.
 <p align="center">
  <img src="https://github.com/johnsaliba/480/blob/master/outside%20loop.PNG" width="800">
  <img src="https://github.com/johnsaliba/480/blob/master/insideloop.PNG" width="800">
 </p>
 ### Justification of the selection of models and parameters;
-For our project we used the Generalized Linear Regression Model. When we first looked at the data we saw linear trends in the data, as seen in the models above, so we explored different types of linear regression to see which gave us the best test data results. The attribute we focused on was wins.  Through testing it gave us the highest squared correlation value on our testing data. Other regression models were significantly less effective. It was able to handle all of the different attributes we had and was the most accurate in predicting the number of wins based on the offensive and defensive data. 
+For our project we used the Generalized Linear Regression Model. When we first looked at the data we saw linear trends in the data, as shown previously, so we explored different types of linear regression models to see which gave us the best test data results. The attribute we focused on was wins.  Through testing, Generalized Linear Regression gave us the highest squared correlation values on our testing data. Other regression models were significantly less effective. It was able to handle all of the different attributes we had and was the most accurate in predicting the number of wins based on the offensive and defensive data. 
 
-For the model's parameters, we used a loop to run the model with alphas ranging from 0 to 1, and lambdas ranging from 0.00000001 to 5. We chose that range for the alphas because we wanted to use both lasso and ridge regression along with the values in between. We chose those lambda values because we wanted to see the model perform with different levels of regularization. We chose that range because it showed how the model's performance changes with different alphas and lambdas. We tried including lambda values above 5 in the range as well, but this did not show any new trends in the model's performance, and just made the chart more difficult to read, so it made the most sense to use lambda values only from 0.00000001 to 5.
+For the model's parameters, we used a loop to run the model with alphas ranging from 0 to 1, and lambdas ranging from 0.00000001 to 5. We chose that range for the alphas because we wanted to use both lasso and ridge regression along with the values in between. We chose those lambda values because we wanted to see the model perform with different levels of regularization. We chose that range because it was wide enough to show how the model's performance changes with different alphas and lambdas. We tried including lambda values above 5 in the range as well, but this did not show any new trends in the model's performance, and just made the chart more difficult to read, so it made the most sense to use lambda values only from 0.00000001 to 5.
 
 
 
@@ -42,9 +42,7 @@ The Generalized Linear Regression model is the best to use with the type of data
  <img align="center" src="https://github.com/johnsaliba/480/blob/master/lambda%20alpha%20r%20square%20legend.PNG" width="150">
 </p>
 
-
-
-Even when the model is performing at its best, it still overfits, but in some instances the squared correlations of the training and testing data were both close to 0.8, and in these instances the model was performing quite well, as you can see in the screenshots below. The one immediately below this text shows that the average number of games teams in the test data set won is around 7.8, and the average number of wins the model predicted is around 8.06. This discrepancy is not a huge one, and since average amount of games won for all teams in the dataset is 8 (Each team plays 16 games in a season), 8.06 is not a bad average.
+Even when the model is performing at its best, it still overfits, but in some instances the squared correlations of the training and testing data were both close to 0.8, and in these instances the model was performing quite well, as you can see in the screenshots below. The one immediately below this text shows that the average number of games teams in the test data set won is around 7.8, and the average number of wins the model predicted is around 8.06. This discrepancy is not a huge one, and since average amount of games won for all teams in the dataset is 8 (Each team plays 16 games in a season, and each game has one winner and one loser), 8.06 is not a bad average prediction number.
 <p align="center">
   <img src="https://github.com/johnsaliba/480/blob/master/averages.PNG" width="800">
 </p>
@@ -53,7 +51,7 @@ The image below this text shows a squared correlation table. It shows that in so
   <img src="https://github.com/johnsaliba/480/blob/master/r%20square%20matrix.PNG" width="800">
 </p>
 
-On the visualization below this paragraph, the left column shows the actual number of games the team won, and the right column shows the model's predicted number of wins. Many of them are very close, but there were some outliers. One of them can be seen in the third row from the bottom. That team won six games, but the model's prediction was around 11.3, which is a huge disparity considering the teams play 16-game seasons. Conversely, there are many instances where the model is off only by a few decimal points. The table in the screenshot below is sorted by which teams the model predicted to win the most games, so the team at the top is the one the model considered to be the best (in the test data set). Even though the model underestimated the amount of games that team would win, it predicted that it would win more games than any other team in the dataset, which turned out to be correct.
+In the visualization below this paragraph, the left column shows the actual number of games the team won, and the right column shows the model's predicted number of wins. Many of them are very close, but there were some outliers. One of them can be seen in the third row from the bottom. That team won six games, but the model's prediction was around 11.3, which is a huge disparity considering the teams play 16-game seasons. Conversely, there are many instances where the model is off only by a few decimal points. The table in the screenshot below is sorted by which teams the model predicted to win the most games, so the team at the top is the one the model considered to be the best in the test data set. Even though the model underestimated the amount of games that team would win, it predicted that it would win more games than any other team in the dataset, which was correct.
 
 <p align="center">
   <img align="center" src="https://github.com/johnsaliba/480/blob/master/model%20predicted%20values.PNG">
