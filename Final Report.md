@@ -13,7 +13,7 @@ For offensive statistics we looked at as points scored, rushing yards gained, pa
 
 The following figures look at the statistics of points scored, passing yards gained, rushing yards gained, and how many wins a team had. We also have a histogram that looks at the number of wins a team got in any season and the how often a team got that many wins, showing that the number of wins is normally distributed. The data can be accessed [here](https://github.com/johnsaliba/480/blob/master/NFL%20TEAM%20DATA.xlsx).
 <p align="center">
- <img src="https://github.com/cwolf51/480/blob/master/points%20scored%20and%20wins.png" width="800">
+ <img src="https://github.com/cwolf51/480/blob/master/points%20scored%20and%20wins.png" alt="test" width="800">
  <img src="https://github.com/cwolf51/480/blob/master/pass%20yards%20allowed%20and%20wins.PNG" width="800">
  <img src="https://github.com/cwolf51/480/blob/master/rush%20yards%20allowed%20and%20wins.PNG" width="800">
  <img src="https://github.com/cwolf51/480/blob/master/distribution%20of%20wins.png" width="800">
