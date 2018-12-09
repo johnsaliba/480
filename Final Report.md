@@ -27,7 +27,8 @@ We used RapidMiner to create a Generalized Linear Regression Model, which can be
  <img src="https://github.com/johnsaliba/480/blob/master/outside%20loop.PNG" width="800">
  <img src="https://github.com/johnsaliba/480/blob/master/insideloop.PNG" width="800">
 </p>
-### Justification of the selection of models and parameters;
+### Justification of Model and Parameters
+
 For our project we used the Generalized Linear Regression Model. When we first looked at the data we saw linear trends in the data, as shown previously, so we explored different types of linear regression models to see which gave us the best test data results. The attribute we focused on was wins.  Through testing, Generalized Linear Regression gave us the highest squared correlation values on our testing data. Other regression models were significantly less effective. It was able to handle all of the different attributes we had and was the most accurate in predicting the number of wins based on the offensive and defensive data. 
 
 For the model's parameters, we used a loop to run the model with alphas ranging from 0 to 1, and lambdas ranging from 0.00000001 to 5. We chose that range for the alphas because we wanted to use both lasso and ridge regression along with the values in between. We chose those lambda values because we wanted to see the model perform with different levels of regularization. We chose that range because it was wide enough to show how the model's performance changes with different alphas and lambdas. We tried including lambda values above 5 in the range as well, but this did not show any new trends in the model's performance, and just made the chart more difficult to read, so it made the most sense to use lambda values only from 0.00000001 to 5.
