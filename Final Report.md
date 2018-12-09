@@ -7,8 +7,16 @@ We used a Generalized Linear Regression Model to predict the number of games won
 
 ### Description of your data with necessary visualizations;
 
+For our project we took the data from the ESPN website and looked and offensive and defensive statistics from all teams dating back to 2002, we only have data for the previous fifteen years because ESPN does not have the data for years prior on their website. We are not including statistics from the current year 2018 because the season is incomplete and we want the data to accurately reflect the predicted outcomes. We choose these statistice because they reflect a teams performence in a game and they are not derived from the number of wins they got in a season. A team could have good stats, but lost many games and vice versa. 
+
+For offensive statistics we looked at as points scored, rushing yards gained, passing yads gained, interceptions thrown, number of times sacked, and fumbles.  The offensive stats look at how well the offensive line of each team did in a season by points, rushing yards, and passing yards. The offensive stats also looked where the offense fell short by the number of sacks allowed and interceptions thrown. For defensive stats we looked at points allowed, rushing yards allowed, passing yards allowed, interceptions caught, sacks against the other team, and number of fumbles forced. The defensive stats analyze the strengths and weakness as well, with strengths being low rush and passing yards allowed, forced fumbles, and interceptions caught. A weaker defensive line is reflected by a high number of rushing and passing yards allowed with low amounts of forced fumbles and few interceptions.
+
+The following figures look at how the statistics of points scored, passing yards gained, and rushing yards gained and how many wins a team had. We also have a histogram that looks at the number of wins a team got in any season and the how often a team got that many wins.
+
 Data can be accessed [here](https://github.com/johnsaliba/480/blob/master/NFL%20TEAM%20DATA.xlsx)
 <img src="https://github.com/cwolf51/480/blob/master/points%20scored%20and%20wins.png" width="800">
+<img src="https://github.com/cwolf51/480/blob/master/pass%20yards%20allowed%20and%20wins.PNG" width="800">
+<img src="https://github.com/cwolf51/480/blob/master/rush%20yards%20allowed%20and%20wins.PNG" width="800">
 <img src="https://github.com/cwolf51/480/blob/master/distribution%20of%20wins.png" width="800">
 
 
@@ -21,7 +29,9 @@ We used RapidMiner to create a Generalized Linear Regression Model, which can be
 <img src="https://github.com/johnsaliba/480/blob/master/insideloop.PNG" width="800">
 
 ### Justification of the selection of models and parameters;
-gave us highest r2 value and was the most accurate regression model
+ For our project we used the Generalized Linear Regression Model. When we first looked at the data we saw linear trends in the data, as seen in the models above, so we explored different types of linear regression to see which gave us the best test data results. The attribute we focused on was wins.  Through testing it gave us the highest r-squared value for our testing data. It was able to handle all of the different attributes we had and was the most accurate in predicting the number of wins based on the offensive and defensive data. 
+
+
 
 ### Conclusions
 
