@@ -27,6 +27,7 @@ We used RapidMiner to create a Generalized Linear Regression Model, which can be
  <img src="https://github.com/johnsaliba/480/blob/master/outside%20loop.PNG" width="800">
  <img src="https://github.com/johnsaliba/480/blob/master/insideloop.PNG" width="800">
 </p>
+
 ### Justification of Model and Parameters
 
 For our project we used the Generalized Linear Regression Model. When we first looked at the data we saw linear trends in the data, as shown previously, so we explored different types of linear regression models to see which gave us the best test data results. The attribute we focused on was wins.  Through testing, Generalized Linear Regression gave us the highest squared correlation values on our testing data. Other regression models were significantly less effective. It was able to handle all of the different attributes we had and was the most accurate in predicting the number of wins based on the offensive and defensive data. 
